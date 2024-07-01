@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import torch.nn as nn
 import torch
-from torchvision import models
-from torchviz import make_dot,make_dot_from_trace
+#from torchvision import models
+#from torchviz import make_dot,make_dot_from_trace
 import torch.nn.functional as F
 
 
@@ -533,7 +533,7 @@ if __name__ == '__main__':
     #model = LW_IRST_ablation(channel=(8, 32, 64), dilations=(2,4,8,16), kernel_size=(7,7,7,7), padding=(3,3,3,3)) # kernel_size/padding = 5/2 7/3 9/4
     model = LightWeightNetwork()
     #可视化
-    graph = make_dot(model(inputs), params=dict(model.named_parameters()))
+    #graph = make_dot(model(inputs), params=dict(model.named_parameters()))
 
 
     out = model(inputs)
