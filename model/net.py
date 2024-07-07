@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import torch.nn as nn
 import torch
 from torchvision import models
-from torchviz import make_dot,make_dot_from_trace
+#from torchviz import make_dot,make_dot_from_trace
 import torch.nn.functional as F
 
 
