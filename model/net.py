@@ -1,8 +1,6 @@
-import matplotlib.pyplot as plt
 import torch.nn as nn
 import torch
 from torchvision import models
-#from torchviz import make_dot,make_dot_from_trace
 import torch.nn.functional as F
 
 
@@ -525,22 +523,4 @@ class  LightWeightNetwork(nn.Module):
         return x6
 
 if __name__ == '__main__':
-    from thop import profile
-    import time
-    import matplotlib.pyplot as plt
-    inputs = torch.randn((1, 3, 512, 512))
-    start = time.perf_counter()
-    #model = LW_IRST_ablation(channel=(8, 32, 64), dilations=(2,4,8,16), kernel_size=(7,7,7,7), padding=(3,3,3,3)) # kernel_size/padding = 5/2 7/3 9/4
-    model = LightWeightNetwork()
-    #可视化
-    # graph = make_dot(model(inputs), params=dict(model.named_parameters()))
-
-
-    out = model(inputs)
-    end = time.perf_counter()
-    FLOPs, params = profile(model, inputs=(inputs,))
-    running_FPS = 1 / (end - start)
-    print('running_FPS:', running_FPS)
-    print('FLOPs=', str(FLOPs/1000000.0) + '{}'.format('M'))
-    print('params=', str(params / 1000000.0) + '{}'.format('M'))
-    print(out.size())
+    pass
