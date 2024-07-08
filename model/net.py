@@ -311,7 +311,7 @@ class DownsamplingBottleneck(nn.Module):
 
 # Lightweight Infrared small segmentation
 class  LightWeightNetwork(nn.Module):
-    def __init__(self, n_classes=1, encoder_relu=False, decoder_relu=True, channel=(4, 16, 32), dilations=(2,4,8,16), kernel_size=(9,9,9,9), padding=(4,4,4,4)):
+    def __init__(self, n_classes=1, encoder_relu=False, decoder_relu=True, channel=(8, 16, 32), dilations=(2,4,8,16), kernel_size=(9,9,9,9), padding=(4,4,4,4)):
         super().__init__()
 
         # Stage 1 - Encoder
